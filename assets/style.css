@@ -42,22 +42,25 @@ html, body, [data-testid="stAppViewContainer"] {
 }
 
 /* ── Hide Streamlit Chrome ──────────────────── */
-/* Hide menu + footer entirely */
-#MainMenu, footer { display: none !important; }
+/* Hide footer and decoration only */
+footer { display: none !important; }
 [data-testid="stDecoration"] { display: none !important; }
 
-/* Hide header CONTENT but keep it in the DOM so the
-   sidebar collapse/expand toggle button stays visible */
-header[data-testid="stHeader"] {
-    background: transparent !important;
-    height: 0 !important;
-    min-height: 0 !important;
+/* Make header transparent — do NOT hide it or its children,
+   that breaks the sidebar toggle, github & share buttons */
+[data-testid="stHeader"] {
+    background-color: var(--bg-base) !important;
+    border-bottom: 1px solid var(--border) !important;
 }
 
-/* Keep only the sidebar toggle button visible */
-header[data-testid="stHeader"] > * { display: none !important; }
-[data-testid="collapsedControl"] { display: flex !important; }
-button[kind="header"] { display: flex !important; }
+/* Style the toolbar buttons to match the dark theme */
+[data-testid="stHeader"] button {
+    color: var(--text-muted) !important;
+}
+[data-testid="stHeader"] button:hover {
+    color: var(--text-primary) !important;
+    background: var(--accent-soft) !important;
+}
 
 /* ── Sidebar Brand ──────────────────────────── */
 .sidebar-brand {
