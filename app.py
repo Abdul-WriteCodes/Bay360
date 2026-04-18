@@ -83,7 +83,7 @@ def _check_password() -> bool:
             key="pwd_input",
         )
 
-        enter = st.button("Enter Platform →", width='stretch')
+        enter = st.button("Enter Platform →", width='content')
 
         if enter or (pwd and pwd == correct):
             if pwd == correct:
