@@ -54,9 +54,9 @@ Paper text:
 {text}"""
 
 
-SYNTHESIS_PROMPT = """You are an expert academic research synthesizer. You have been given structured extractions from {n_papers} research papers.
+SYNTHESIS_PROMPT = """You are an expert academic research synthesizer and seasoned level 7+ writer. You have been given structured extractions from {n_papers} research papers.
 
-Your task is to produce a cross-paper synthesis with the following JSON structure:
+Your task is to produce a well crtiqued and comprehensive cross-paper synthesis with the following JSON structure:
 
 {{
   "common_findings": ["finding 1", "finding 2", ...],          // 3-6 recurring themes/results across papers
@@ -97,7 +97,7 @@ def extract_paper(text: str, filename: str = "") -> dict[str, Any]:
         messages=[
             {
                 "role": "system",
-                "content": "You are a precise academic research analyst. You extract structured data from research papers. Always return valid JSON only."
+                "content": "You are a precise academic research analyst and expert writer. You extract structured data from research papers. Always return valid JSON only."
             },
             {
                 "role": "user",
@@ -146,7 +146,7 @@ def synthesize_papers(papers: list[dict]) -> dict[str, Any]:
         messages=[
             {
                 "role": "system",
-                "content": "You are an expert academic research synthesizer. Return only valid JSON."
+                "content": "You are an expert academic research synthesizer and expert level 7+ writer. Return only valid JSON."
             },
             {
                 "role": "user",
