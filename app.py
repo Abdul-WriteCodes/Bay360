@@ -117,10 +117,80 @@ p, li, .stMarkdown p {
 code, pre, [data-testid="stCode"] { font-family: var(--fm) !important; }
 
 /* ── Streamlit chrome ── */
-[data-testid="stHeader"]             { background: transparent !important; }
-[data-testid="stToolbar"]            { display: none !important; }
-[data-testid="stDecoration"]         { display: none !important; }
-footer                               { display: none !important; }
+
+/* Header bar — dark themed, not hidden */
+[data-testid="stHeader"] {
+  background: var(--navy-2) !important;
+  border-bottom: 1px solid var(--border) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Sidebar collapse/expand toggle button */
+[data-testid="stSidebarCollapsedControl"] button,
+[data-testid="stSidebarNavToggleButton"] button,
+button[aria-label="Close sidebar"],
+button[aria-label="Open sidebar"],
+[data-testid="collapsedControl"] {
+  color: var(--gold-light) !important;
+  background: var(--gold-dim) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--r) !important;
+}
+[data-testid="stSidebarCollapsedControl"] button:hover,
+[data-testid="stSidebarNavToggleButton"] button:hover,
+[data-testid="collapsedControl"]:hover {
+  background: var(--gold) !important;
+  color: var(--navy) !important;
+}
+[data-testid="stSidebarCollapsedControl"] button svg,
+[data-testid="stSidebarNavToggleButton"] button svg,
+[data-testid="collapsedControl"] svg {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* Toolbar (GitHub, Share, etc.) — keep visible, style to match theme */
+[data-testid="stToolbar"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: transparent !important;
+}
+[data-testid="stToolbar"] button,
+[data-testid="stToolbar"] a {
+  color: var(--text-3) !important;
+  background: transparent !important;
+  border: 1px solid var(--border-soft) !important;
+  border-radius: var(--r) !important;
+  transition: all var(--tr) !important;
+}
+[data-testid="stToolbar"] button:hover,
+[data-testid="stToolbar"] a:hover {
+  color: var(--gold-light) !important;
+  background: var(--gold-dim) !important;
+  border-color: var(--border) !important;
+}
+[data-testid="stToolbar"] button svg,
+[data-testid="stToolbar"] a svg {
+  fill: currentColor !important;
+}
+
+/* Top-right action menu (three-dot / kebab) */
+[data-testid="stMainMenu"] button,
+[data-testid="stActionButtonIcon"] {
+  color: var(--text-3) !important;
+}
+[data-testid="stMainMenu"] button:hover {
+  color: var(--gold-light) !important;
+  background: var(--gold-dim) !important;
+}
+
+/* Decorative top bar stripe — hide only this */
+[data-testid="stDecoration"] { display: none !important; }
+
+/* Streamlit footer watermark */
+footer { display: none !important; }
+
 [data-testid="stMainBlockContainer"] { padding-top: 1.6rem !important; }
 .block-container { padding-left: 2rem !important; padding-right: 2rem !important; }
 
