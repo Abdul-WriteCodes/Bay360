@@ -82,7 +82,7 @@ def synthesis_credit_cost(n_papers: int) -> int:
 # ═══════════════════════════════════════════════════════════════════════
 st.set_page_config(
     page_title="EmpiricX — Research Intelligence",
-    page_icon="◈",
+    page_icon="🔍",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -1112,8 +1112,8 @@ if not st.session_state.access_granted:
     # ── Footer ──
     st.markdown("""
     <div class="lp-footer fi d7">
-      <div class="footer-brand">Empiri<em>X</em></div>
-      <div class="footer-copy">Research Intelligence Engine &middot; Credit-based access &middot; v2.0</div>
+      <div class="footer-brand">Empiric<em>X</em></div>
+      <div class="footer-copy">Research Intelligence Engine &middot; Bayantx360 &middot; v2.0</div>
     </div>
     """, unsafe_allow_html=True)
 
