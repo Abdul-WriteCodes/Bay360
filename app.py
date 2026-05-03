@@ -990,7 +990,7 @@ if not st.session_state.access_granted:
         st.markdown("""
         <div class="price-card fi d3">
           <div class="price-plan">Starter</div>
-          <div class="price-amount"><span class="price-curr">$</span>10</div>
+          <div class="price-amount"><span class="price-curr">.</span>$10</div>
           <div class="price-credits">10 Research Credits</div>
           <div class="price-divider"></div>
           <ul class="price-features">
@@ -1008,7 +1008,7 @@ if not st.session_state.access_granted:
         <div class="price-card featured fi d4">
           <span class="price-badge-pill badge-pop">Most Popular</span>
           <div class="price-plan">Standard</div>
-          <div class="price-amount"><span class="price-curr">$</span>30</div>
+          <div class="price-amount"><span class="price-curr">.</span>$30</div>
           <div class="price-credits">40 Research Credits</div>
           <div class="price-divider"></div>
           <ul class="price-features">
@@ -1026,7 +1026,7 @@ if not st.session_state.access_granted:
         <div class="price-card fi d5">
           <span class="price-badge-pill badge-val">Best Value</span>
           <div class="price-plan">Pro</div>
-          <div class="price-amount"><span class="price-curr">$</span>80</div>
+          <div class="price-amount"><span class="price-curr">.</span>$80</div>
           <div class="price-credits">120 Research Credits</div>
           <div class="price-divider"></div>
           <ul class="price-features">
